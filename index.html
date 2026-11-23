@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luxury Stay | Private House Stay in Srinagar, Kashmir</title>
+<meta name="description" content="Private four-bedroom house stay in Srinagar, Kashmir with garden, dining area, parking, free Wi-Fi and a caretaker. Close to the airport and Lal Chowk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" id="brandName"></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button>
+  <nav id="menu" aria-label="Main">
+    <a href="#about">About</a><a href="#stay">Accommodation</a><a href="#packages">Packages</a>
+    <a href="#experiences">Experiences</a><a href="#gallery">Gallery</a><a href="#location">Location</a>
+    <a href="#faq">FAQ</a><a class="btn small" href="#book">Book your stay</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div class="hero-txt">
+      <h1 id="heroName"></h1>
+      <p class="tag" id="heroTag"></p>
+      <p class="lead" id="heroIntro"></p>
+      <div class="cta"><a class="btn" href="#book">Book your stay</a><a class="btn ghost" href="#stay">Explore the property</a></div>
+    </div>
+    <aside class="hform" aria-label="Quick enquiry">
+      <h2>Send an enquiry</h2>
+      <p class="hs">We reply on WhatsApp.</p>
+      <form id="enq2" novalidate>
+        <label>Your name<input id="qName" required autocomplete="name"></label>
+        <div class="row"><label>Check-in<input type="date" id="qIn" required></label><label>Check-out<input type="date" id="qOut" required></label></div>
+        <label>Number of guests<input type="number" id="qGuests" min="1" max="12" required></label>
+        <p class="err" id="qErr" role="alert"></p>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+      </form>
+    </aside>
+  </div>
+</section>
+
+<section id="about" class="sec"><div class="wrap two">
+  <div><h2>About the stay</h2><div id="aboutText"></div></div>
+  <ul class="hl" id="highlights"></ul>
+</div></section>
+
+<section id="stay" class="sec alt"><div class="wrap">
+  <h2>Accommodation</h2><p class="sub">Four bedrooms, all yours, plus shared spaces for the whole group.</p>
+  <div class="rooms" id="rooms"></div>
+  <h3>Shared spaces</h3><div class="grid4" id="spaces"></div>
+</div></section>
+
+<section id="packages" class="sec"><div class="wrap">
+  <h2>Packages</h2><p class="sub">Choose a package and send an enquiry. We will confirm availability and price with you.</p>
+  <div class="grid3" id="packageGrid"></div>
+</div></section>
+
+<section id="experiences" class="sec alt"><div class="wrap">
+  <h2>Experiences in Kashmir</h2><p class="sub" id="expNote"></p>
+  <div class="grid4" id="expGrid"></div>
+</div></section>
+
+<section id="gallery" class="sec"><div class="wrap">
+  <h2>Gallery</h2><div class="filters" id="filters" role="group" aria-label="Gallery categories"></div>
+  <div class="grid4 gal" id="galGrid"></div>
+</div></section>
+
+<section id="reviews" class="sec alt"><div class="wrap">
+  <h2>Guest reviews</h2><div class="grid3" id="reviewGrid"></div>
+</div></section>
+
+<section id="location" class="sec"><div class="wrap two">
+  <div><h2>Location</h2><p id="addr"></p><ul class="plain" id="locList"></ul><p><a class="btn" id="mapBtn" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
+  <div id="mapBox" class="mapbox"></div>
+</div></section>
+
+<section id="faq" class="sec alt"><div class="wrap narrow"><h2>Questions guests ask</h2><div id="faqList"></div></div></section>
+
+<section id="book" class="sec book"><div class="wrap narrow">
+  <h2>Send an enquiry</h2><p class="sub">Fill in your plans and we will open WhatsApp with your message ready to send.</p>
+  <form id="enq" novalidate>
+    <label>Your name<input id="fName" required autocomplete="name"></label>
+    <div class="row"><label>Check-in<input type="date" id="fIn" required></label><label>Check-out<input type="date" id="fOut" required></label></div>
+    <div class="row"><label>Number of guests<input type="number" id="fGuests" min="1" required></label><label>Preferred package<select id="fPack"></select></label></div>
+    <label>Special requests<textarea id="fReq" rows="3"></textarea></label>
+    <p class="err" id="err" role="alert"></p>
+    <div class="cta"><button class="btn" type="submit">Send on WhatsApp</button><a class="btn ghost" id="callBtn">Call us</a></div>
+  </form>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap"><span id="footName"></span><span id="footContact"></span></div></footer>
+
+<dialog id="lb" aria-label="Photo viewer">
+  <button class="lbx" id="lbClose" aria-label="Close">Close</button>
+  <button class="lbn prev" id="lbPrev" aria-label="Previous photo">&lsaquo;</button>
+  <img id="lbImg" alt=""><p id="lbCap"></p>
+  <button class="lbn next" id="lbNext" aria-label="Next photo">&rsaquo;</button>
+</dialog>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
