@@ -53,14 +53,18 @@ const CONFIG = {
   ],
 
   /* by: "property" = arranged by you on request. "external" = a suggestion only. */
-  experiencesNote: "Items marked 'Arranged by us' are available on request. Please confirm details when you enquire. Other places are suggestions only; their tickets and tours are not included.",
+  experiencesNote: "Rates are in INR (\u20b9). Items marked 'Arranged by us' are available on request; please confirm details when you enquire. Other places are suggestions only; their tickets and tours are not included.",
   experiences: [
-    { name: "Airport pickup and drop", desc: "Pickup and drop-off can be arranged on request.", image: "assets/images/exp-airport-pickup.svg", by: "property" },
-    { name: "Breakfast and meals", desc: "Meals can be arranged on request.", image: "assets/images/exp-meals.svg", by: "property" },
-    { name: "Sightseeing and taxi", desc: "Local sightseeing and taxi can be arranged on request.", image: "assets/images/exp-sightseeing-taxi.svg", by: "property" },
-    { name: "Bonfire and barbecue", desc: "Bonfire or barbecue in the garden on request.", image: "assets/images/exp-bonfire.svg", by: "property" },
+    { name: "Airport pickup", desc: "Airport pickup can be arranged on request.", image: "assets/images/exp-airport-pickup.jpg", by: "property",
+      rates: [["Sedan, 4 seater", "\u20b91,000"], ["SUV, 7 seater", "\u20b91,500"], ["Tempo Traveller, 14 seater", "\u20b92,500"], ["Urbania, 17 seater", "\u20b93,000"]] },
+    { name: "Breakfast and meals", desc: "Breakfast and dinner can be arranged on request.", image: "assets/images/exp-meals.jpg", by: "property",
+      rates: [["Breakfast and dinner (per head)", "\u20b9550"]],
+      lines: ["Breakfast: toast, tea, omelette", "Dinner: 2 veg dishes, 1 non-veg dish, rice and chapati"] },
+    { name: "Sightseeing and taxi", desc: "Local sightseeing with a taxi can be arranged on request.", image: "assets/images/exp-sightseeing-taxi.jpg", by: "property",
+      rates: [["Sedan, 4 seater", "\u20b93,500"], ["SUV, 7 seater", "\u20b94,500"], ["Tempo Traveller, 14 seater", "\u20b95,500"], ["Urbania, 17 seater", "\u20b97,500"]] },
+    { name: "Bonfire", desc: "Available on special request.", image: "assets/images/exp-bonfire.jpg", by: "property" },
     { name: "Dal Lake", desc: "Shikara rides and the lake-side promenade.", image: "assets/images/exp-dal-lake.svg", by: "external" },
-    { name: "Mughal Gardens", desc: "Terraced gardens such as Nishat Bagh and Shalimar Bagh.", image: "assets/images/exp-mughal-gardens.svg", by: "external" },
+    { name: "Mughal Gardens", desc: "Terraced gardens such as Chashma Shahi, Nishat Bagh and Shalimar Bagh.", image: "assets/images/exp-mughal-gardens.jpg", by: "external" },
     { name: "Gulmarg", desc: "A day excursion to the meadows and gondola.", image: "assets/images/exp-gulmarg.svg", by: "external" },
     { name: "Pahalgam", desc: "River valleys and pine forests.", image: "assets/images/exp-pahalgam.svg", by: "external" },
     { name: "Sonamarg", desc: "Mountain scenery and glacier views.", image: "assets/images/exp-sonamarg.svg", by: "external" },
@@ -102,7 +106,7 @@ const CONFIG = {
     { q: "Is Wi-Fi available?", a: "Yes, free Wi-Fi is available." },
     { q: "Is someone at the property?", a: "Yes, a caretaker is available. Guests can reach them by phone or WhatsApp." },
     { q: "Can guests use the garden and dining area?", a: "Yes. Guests can use the lobby, garden and dining area." },
-    { q: "Do you arrange airport pickup, meals or sightseeing?", a: "Yes, on request: airport pickup and drop, breakfast and meals, sightseeing and taxi, and bonfire or barbecue in the garden. Please confirm details when you enquire." },
+    { q: "Do you arrange airport pickup, meals or sightseeing?", a: "Yes, on request: airport pickup, breakfast and dinner, and sightseeing with a taxi. Rates are listed in the Experiences section. Bonfire is available on special request." },
     { q: "What are the booking and cancellation policies?", a: "Cancellation terms are shared at the time of booking. Send us an enquiry on WhatsApp to begin." },
     { q: "Which payment methods do you accept?", a: "UPI, bank transfer and cash on arrival." },
     { q: "Do you host families and groups?", a: "Yes. The property suits families, couples and groups of up to 12 guests." }

@@ -14,7 +14,12 @@
   document.title = C.name + " | Private House Stay in Srinagar, Kashmir";
   $("brandName").textContent = C.name; $("heroName").textContent = C.name;
   $("heroTag").textContent = C.tagline; $("heroIntro").textContent = C.intro;
-  if (C.heroImage) $("top").style.backgroundImage = "linear-gradient(180deg,rgba(20,38,30,.3),rgba(20,38,30,.85)),url('" + C.heroImage + "')";
+  document.addEventListener("error", function (e) { var t = e.target; if (t.tagName === "IMG" && !t.dataset.fb && /assets\/images\//.test(t.getAttribute("src") || "")) { t.dataset.fb = 1; t.src = t.getAttribute("src").replace("assets/images/", ""); } }, true);
+  if (C.heroImage) {
+    var setHero = function (p) { $("top").style.backgroundImage = "linear-gradient(180deg,rgba(20,38,30,.3),rgba(20,38,30,.85)),url('" + p + "')"; };
+    var probe = new Image(); probe.onload = function () { setHero(C.heroImage); };
+    probe.onerror = function () { setHero(C.heroImage.replace("assets/images/", "")); }; probe.src = C.heroImage;
+  }
   $("aboutText").innerHTML = C.about.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
   $("highlights").innerHTML = list(C.highlights);
 
@@ -32,7 +37,9 @@
 
   $("expNote").textContent = C.experiencesNote;
   $("expGrid").innerHTML = C.experiences.map(function (x) {
-    return '<div class="card x">' + img(x.image, x.name) + '<div class="xb"><span class="tagx">' + (x.by === "property" ? "Arranged by us" : "Suggestion, not included") + '</span><h3>' + esc(x.name) + '</h3><p>' + esc(x.desc) + '</p></div></div>';
+    var rates = x.rates ? '<ul class="rates">' + x.rates.map(function (r) { return "<li><span>" + esc(r[0]) + "</span><b>" + esc(r[1]) + "</b></li>"; }).join("") + "</ul>" : "";
+    var lines = x.lines ? '<ul class="xl">' + list(x.lines) + "</ul>" : "";
+    return '<div class="card x">' + img(x.image, x.name) + '<div class="xb"><span class="tagx">' + (x.by === "property" ? "Arranged by us" : "Suggestion, not included") + '</span><h3>' + esc(x.name) + '</h3><p>' + esc(x.desc) + '</p>' + rates + lines + '</div></div>';
   }).join("");
 
   // Gallery with filters and lightbox

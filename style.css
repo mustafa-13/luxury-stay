@@ -63,3 +63,5 @@ dialog[open]{display:grid;place-items:center;grid-template-rows:1fr auto}dialog:
 .hform .btn{background:var(--green);border-color:var(--green)}
 @media(max-width:900px){.hero-in{grid-template-columns:1fr;gap:32px;padding:96px 20px 40px}.hero{min-height:0}}
 .hform label,.hform input{min-width:0;max-width:100%}.hform input[type=date]{font-size:.85rem;padding:10px 6px}
+.rates{list-style:none;margin:8px 0 0;padding:0;border-top:1px solid var(--line)}.rates li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);font-size:.93rem}.rates b{font-weight:600;color:var(--green);white-space:nowrap}.xl{margin:8px 0 0;padding-left:18px;font-size:.92rem}
+.card .rates{padding-left:0}.rates li span{flex:1 1 auto}.rates li b{flex:0 0 auto}
